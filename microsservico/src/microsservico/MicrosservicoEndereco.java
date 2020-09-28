@@ -27,7 +27,7 @@ public class MicrosservicoEndereco extends AbstractEndereco {
                 this.logradouro = viaCep.getLogradouro();
                 this.bairro = viaCep.getBairro();
                 this.complemento = viaCep.getComplemento();
-                this.localidade = viaCep.getLocalidade();
+                this.cidade = viaCep.getLocalidade();
                 this.uf = viaCep.getUf();
             } catch (ViaCEPException ex) {
                 throw ex;

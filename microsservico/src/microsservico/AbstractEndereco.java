@@ -17,7 +17,7 @@ public abstract class AbstractEndereco {
     protected String logradouro;
     protected String bairro;
     protected String complemento;
-    protected String localidade;
+    protected String cidade;
     protected String uf;
     
     protected final Map<String, String> estados = new HashMap<>();
@@ -38,8 +38,8 @@ public abstract class AbstractEndereco {
         return complemento;
     }
 
-    public String getLocalidade() {
-        return localidade;
+    public String getCidade() {
+        return cidade;
     }
 
     public String getUf() {
