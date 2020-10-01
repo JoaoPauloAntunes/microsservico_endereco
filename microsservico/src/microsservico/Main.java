@@ -7,6 +7,8 @@ package microsservico;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,7 +24,7 @@ public class Main extends javax.swing.JFrame {
         initFields();
     }
     
-    void initFields() {
+    private void initFields() {
         jLabelEstado.setText("");
         jLabelCidade.setText("");
         jLabelBairro.setText("");
@@ -174,7 +176,7 @@ public class Main extends javax.swing.JFrame {
                 jLabelBairro.setText(me.getBairro());
                 jLabelComplemento.setText(me.getComplemento());
             } catch (Exception ex) {
-                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, "CEP inválido!");
             }
         }
     }//GEN-LAST:event_jFormattedTextFieldCepKeyReleased
@@ -211,10 +213,8 @@ public class Main extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Main().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Main().setVisible(true);
         });
     }
 
